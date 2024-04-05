@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Resume</title>
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  
+    <!-- <link rel="stylesheet" href="resume.css" /> -->
+   
+
+    <style>
+      .body1{
+        
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly blurred white background */
+  backdrop-filter: blur(50px); /* Adjust blur intensity as needed */
+  z-index: 0; /* Send background to the back */
+      }
+      .container{
+        border-radius: 10px;
+  box-shadow: 0px 0px 200px rgba(245, 8, 8, 0.1); /* Add shadow for depth */
+  z-index: 1; /* Ensure main content stays on top */
+}
+      
+      /* Custom CSS */
+      /* .resume {
+        margin-top: 50px;
+      }
+
+      .resume h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .resume-section {
+        margin-bottom: 20px;
+      }
+
+      .resume-section h3 {
+        margin-bottom: 10px;
+      }
+
+      .resume-section ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .resume-section ul li {
+        margin-bottom: 5px;
+      } */
+
+      .rounded-photo {
+        border-radius: 50%;
+      }
+      /* div {
+        border: 1px solid black;
+      } */
+      .heading {
+        height: 170px;
+      }
+      .contact {
+        margin-top: 100px;
+        
+      }
+      .contact ul{
+        display: flex;
+        flex-direction: column;
+        max-width: 400px  ;
+      }
+      .myimage {
+        height: 240px;
+        width: 247px;
+        position: relative;
+        top: 43px;
+      }
+      .contact-heading {
+        position: relative;
+        display: inline-block;
+      }
+
+      .contact-heading::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 4px;
+        background-color: #dc3545; /* Bootstrap danger color */
+        border-radius: 50px;
+      }
+      .contact li {
+        margin: 5px;
+        /* border: 1px solid pink; */
+      }
+      .edu-heading  {
+        position: relative;
+        display: inline-block;
+      }
+
+      .edu-heading::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 4px;
+        background-color: #dc3545; /* Bootstrap danger color */
+        border-radius: 50px;
+      }
+      .education li {
+        margin: 5px;
+      }
+      .lang-heading {
+        position: relative;
+        display: inline-block;
+      }
+      .lang-heading::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 4px;
+        background-color: #dc3545; /* Bootstrap danger color */
+        border-radius: 50px;
+      }
+      .language li {
+        margin: 5px;
+      }
+      .obj-heading {
+        position: relative;
+        display: inline-block;
+      }
+      .obj-heading::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 4px;
+        background-color: #dc3545;
+        border-radius: 50px;
+      }
+      .skill-heading,
+      .tech-summary-heading,
+      .achievement-heading ,  .hobbies-heading{
+        position: relative;
+        display: inline-block;
+      }
+      .skill-heading::after,
+      .tech-summary-heading::after,
+      .achievement-heading::after ,  .hobbies-heading::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 4px;
+        background-color: #dc3545;
+        border-radius: 50px;
+      }
+      .skill li,
+      .achievement li {
+        margin: 5px;
+      }
+      #imageContainer img{
+        max-height: 300px;
+    max-width: 300px;
+    border-radius: 50%;
+    position: relative;
+
+      }
+      .printResume{
+        display: flex;
+        justify-content: center;
+      }
+      #lang li{
+        border: 1px solid red;
+        border-radius:10px ;
+        display: inline-block;
+        padding: 10px;
+        color: rgb(93, 69, 233);
+      }
+      #Achievement li{
+        border: 1px solid red;
+        border-radius:10px ;
+        display: inline-block;
+        padding: 10px;
+        color: rgb(93, 69, 233);
+      }
+      #Hobbies li{
+        border: 1px solid red;
+        border-radius:10px ;
+        display: inline-block;
+        padding: 10px;
+        color: rgb(93, 69, 233);
+        margin: 5px;
+      }
+      #Skill  li{
+        border: 1px solid red;
+        border-radius:10px ;
+        display: inline-block;
+        padding: 10px;
+        color: rgb(93, 69, 233);
+        margin: 5px;
+      }
+ .container{
+  border: 1px solid rgb(93, 69, 233);
+ }
+    </style>
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="resume">
+            <h1>Resume</h1>
+            <div id="resumeContent">
+              <div class="heading">
+                <div id="image"></div>
+                <div id="myname"></div>
+              </div>
+              <div class="div1"></div>
+              <div class="div2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+<div class="body1">
+    <div class="container">
+      <div class="row mt-12 heading bg-danger text-light">
+        <div class="col-md-4 d-flex justify-content-center align-items-end image" id="myimage">
+          <!-- <img
+            src="Photo.JPG"
+            alt="Your Photo"
+            class="img-fluid rounded-circle img-fluid img-thumbnail float-left myimage"
+          /> -->
+          <div id="imageContainer"></div>  
+        
+        </div>
+        <div class="col-md-8 d-flex justify-content-center myname" id="myname">
+          <!-- <h2 class="display-2">Your Name</h2> -->
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="contact">
+            <!-- <div class="contact"> -->
+            <h4 class="contact-heading">My Contact</h4>
+            <ul class="list-unstyled">
+              <li> <i class="fas fa-mobile-alt mr-2"></i>Phone: <span id="phone"></span></li>
+              <li>
+                <i class="fas fa-envelope mr-2"></i>Email: <span id="email"></span>
+              </li>
+              <li>
+                <i class="fab fa-github mr-2"></i>GitHub:<span id="github"></span>
+              </li>
+              <li>
+                <i class="fab fa-linkedin mr-2"></i>LinkedIn:
+                <span id="linkedin"></span>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt mr-2"></i>Location: <span id="location"></span>
+              </li>
+            </ul>
+          </div>
+          <div class="education">
+            <h4 class="edu-heading" id="edu-heading"></h4>
+           <ul id="educate">
+
+           </ul>
+          </div>
+          <div class="language">
+            <h4 class="lang-heading" id="lang-heading"></h4>
+            <ul id="lang" >
+              
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="objective">
+            <h3 class="obj-heading" id="obj-heading"></h3>
+            <p id="Objective">
+              
+            </p>
+          </div>
+          <div class="skill">
+            <h3 class="skill-heading" id="skill-heading"></h3>
+            <ul id="Skill">
+             
+            </ul>
+          </div>
+          <div class="tech-summary">
+            <h3 class="tech-summary-heading" id="tech-summary-heading"></h3>
+           <ul id="Project"></ul>
+          </div>
+          <div class="achievement">
+            <h3 class="achievement-heading" id="achievement-heading"></h3>
+            <ul id="Achievement">
+              
+            </ul>
+          </div>
+          <div class="hobbies">
+            <h3 class="hobbies-heading" id="hobbies-heading"></h3>
+            <ul  id="Hobbies"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- jsPDF library -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<div class="printResume">  <button id="printBtn" class="btn btn-primary">Print</button></div>
+
+
+
+
+    <script>
+       window.onload = function () {
+        const imageData = localStorage.getItem("imageData");
+        if (imageData) {
+          const imageContainer = document.getElementById("imageContainer");
+          const image = new Image();
+          image.src = imageData;
+          imageContainer.appendChild(image);
+        }
+      }
+      // JavaScript
+      document.addEventListener("DOMContentLoaded", function () {
+        const formData = JSON.parse(localStorage.getItem("formData"));
+        if (formData) {
+          displayResume(formData);
+        }
+      });
+
+      function displayResume(formData) {
+        const resumeContent = document.getElementById("resumeContent");
+        const myname = document.getElementById("myname");
+        const phone=document.getElementById("phone");
+        const email= document.getElementById("email");
+        const github= document.getElementById("github");
+        const linkedin=document.getElementById("linkedin");
+        const location=document.getElementById("location");
+        let lang = document.getElementById("lang");
+        const Objective = document.getElementById("Objective");
+        let Skill= document.getElementById("Skill");
+        let Project = document.getElementById("Project");
+        let Achievement= document.getElementById("Achievement");
+        let Hobbies= document.getElementById("Hobbies");
+        // const myimage = document.getElementById("myimage");
+        //Photo
+        // console.log(`${formData.photo}`)
+        // myimage.innerHTML +=`
+        // This is A Phton
+        
+        //   <img
+        //     src="${formData.photo}"
+        //     alt="Uploaded Photsdo"
+        //     class="img-fluid rounded-circle img-fluid img-thumbnail float-left myimage
+        //   />
+        // `;
+        
+        // Name
+        myname.innerHTML += `<h2 class="display-3">${formData.name}</h2>`;
+        //My Contact
+        phone.innerHTML+=` ${formData.mobile}`;
+        email.innerHTML+=`${formData.email}`;
+        github.innerHTML+=` ${formData.github}`;
+        linkedin.innerHTML+=` ${formData.linkedin}`;
+        location.innerHTML+=` ${formData.location}`;
+
+        // Personal Information
+      //   resumeContent.innerHTML += `
+      //   <div class="resume-section">
+      //     <h3>Personal Information</h3>
+      //     <p>Name: ${formData.name}</p>
+      //     <p> <i class="fas fa-mobile-alt mr-2"></i>Mobile: ${formData.mobile}</p>
+      //     <p>Email: ${formData.email}</p>
+      //     <p>Github: ${formData.github}</p>
+      //     <p>LinkedIn: ${formData.linkedin}</p>
+      //     <p>Location: ${formData.location}</p>
+          
+      //   </div>
+      // `;
+
+        // Career Objective
+        if (formData.careerObjective) {
+          document.getElementById("obj-heading").innerHTML=`Career Objective`;
+          Objective.innerHTML += `
+          
+            ${formData.careerObjective}
+       
+        `;
+        }
+
+        // Skills
+        if (formData.skills.length > 0) {
+          document.getElementById("skill-heading").innerHTML=`Skills`;
+          Skill.innerHTML += `
+          
+              ${formData.skills.map((skill) => `<li>${skill}</li>`).join("")}
+           
+        `;
+        }
+
+        // Summaries
+        if (formData.summaries.length > 0) {
+          document.getElementById("tech-summary-heading").innerHTML=`Projects`;
+          Project.innerHTML += `
+         
+              ${formData.summaries
+                .map(
+                  (summary) =>
+                    `<li><strong>${summary.header}</strong>: ${summary.description}</li>`
+                )
+                .join("")}
+            
+        `;
+        }
+
+        // Education
+        if (formData.education.length > 0) {
+          document.getElementById("edu-heading").innerHTML=`Education`
+          educate.innerHTML += `
+          
+          
+              ${formData.education
+                .map(
+                  (edu) =>
+                    `<li>${edu.institution} - ${edu.course} (${edu.percentage}%)</li>`
+                )
+                .join("")}
+            
+       
+        `;
+        }
+
+        // Achievements
+        if (formData.achievements.length > 0) {
+          document.getElementById("achievement-heading").innerHTML=`Achievements`;
+          Achievement.innerHTML += `
+          
+              ${formData.achievements
+                .map((achievement) => `<li>${achievement}</li>`)
+                .join("")}
+            
+        `;
+        }
+
+        // Languages
+        if (formData.languages.length > 0) {
+          document.getElementById("lang-heading").innerHTML=`Languages`;
+
+          lang.innerHTML += `
+          
+          
+              ${formData.languages
+                .map((language) => `<li>${language}</li>`)
+                .join("")}
+           
+        `;
+        }
+
+        // Hobbies
+        if (formData.hobbies.length > 0) {
+          document.getElementById("hobbies-heading").innerHTML=` Hobbies and Interests`;
+          Hobbies.innerHTML += `
+          
+          
+              ${formData.hobbies.map((hobby) => `<li>${hobby}</li>`).join("")}
+           
+        `;
+        }
+      }
+      $(document).ready(function () {
+      // Function to handle button click
+      $('#printBtn').on('click', function () {
+        // Trigger browser's print functionality
+        window.print();
+      });
+    });
+    </script>
+  </body>
+</html>
